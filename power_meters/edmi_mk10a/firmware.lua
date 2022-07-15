@@ -2,7 +2,7 @@ local BAUDRATE = 9600
 local DATA_BITS = 8
 local PARITY = 'N'
 local STOP_BITS = 1
-local ADDRESS = 100
+local ADDRESS = 1
 
 function main()
   local result = rs232.init(BAUDRATE, DATA_BITS, PARITY, STOP_BITS)
@@ -17,7 +17,11 @@ function main()
 end
 
 function send_properties()
-  enapter.send_properties({vendor = "EDMI", model = "Mk10A"})
+  enapter.send_properties({
+    vendor = "EDMI",
+    model = "Mk10A",
+    serial_number = 214670933
+  })
 end
 
 function send_telemetry()

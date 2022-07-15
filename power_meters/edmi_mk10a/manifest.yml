@@ -15,6 +15,9 @@ properties:
   model:
     type: string
     display_name: Model
+  serial_number:
+    type: integer
+    display_name: Serial Number
 
 telemetry:
   status:
