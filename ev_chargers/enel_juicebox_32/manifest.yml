@@ -1,8 +1,12 @@
 blueprint_spec: device/1.0
-
 display_name: Enel JuiceBox 32
 description: Smart EV charging station
 icon: enapter-car-charger
+license: MIT
+contributors:
+  - anataty
+support:
+  email: tyugaj@enapter.com
 
 communication_module:
   product: ENP-VIRTUAL
@@ -81,10 +85,10 @@ alerts:
       Can't read data from Enel JuiceBox.
       Please check configuration parameters.
   connection_err:
-    severity: error
+    severity: warning
     display_name: Connection Error
     description: >
-      Please use 'Set Up Connection' command to set up your
+      Please use "Set Up Connection" command to set up your
       JuiceNet account configuration.
 
 command_groups:
